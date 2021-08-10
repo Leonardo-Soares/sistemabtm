@@ -39,6 +39,11 @@ class HomeController extends Controller
         $slide1=Confing::get('slide1');
         $slide2=Confing::get('slide2');
         $slide3=Confing::get('slide3');
+        $slide4=Confing::get('slide4');
+        $slide5=Confing::get('slide5');
+        $slide6=Confing::get('slide6');
+        $slide7=Confing::get('slide7');
+        $slide8=Confing::get('slide8');
         $rodapeslide1=Confing::get('rodapeslide1');
         $rodapeslide2=Confing::get('rodapeslide2');
         $rodapeslide3=Confing::get('rodapeslide3');
@@ -103,6 +108,11 @@ class HomeController extends Controller
         'slide1'=>$slide1,
         'slide2'=>$slide2,
         'slide3'=>$slide3,
+        'slide4'=>$slide4,
+        'slide5'=>$slide5,
+        'slide6'=>$slide6,
+        'slide7'=>$slide7,
+        'slide8'=>$slide8,
         'rodapeslide1'=>$rodapeslide1,
         'rodapeslide2'=>$rodapeslide2,
         'rodapeslide3'=>$rodapeslide3,
@@ -164,7 +174,8 @@ class HomeController extends Controller
         Confing::atualizar('email',$request->email);
         Confing::atualizar('facebook',$request->facebook);
         Confing::atualizar('boleto',$request->boleto);
-        return "ok";
+        
+        return redirect()->back();
     }
 
     public function slide(Request $request)
@@ -191,6 +202,12 @@ class HomeController extends Controller
             $path = $request->slide3->storeAs('public/images', "slide3.$extension");
             Confing::atualizar('slide3',$path);
         }
+
+        Confing::atualizar('slide4',$request->slide4);
+        Confing::atualizar('slide5',$request->slide5);
+        Confing::atualizar('slide6',$request->slide6);
+        Confing::atualizar('slide7',$request->slide7);
+        Confing::atualizar('slide8',$request->slide8);
 
         return redirect()->back();
         

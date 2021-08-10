@@ -21,6 +21,11 @@ class IndexController extends Controller
         $slide1=Confing::get('slide1');
         $slide2=Confing::get('slide2');
         $slide3=Confing::get('slide3');
+        $slide4=Confing::get('slide4');
+        $slide5=Confing::get('slide5');
+        $slide6=Confing::get('slide6');
+        $slide7=Confing::get('slide7');
+        $slide8=Confing::get('slide8');
         $logo1=Confing::get('logo1');
         $logo2=Confing::get('logo2');
         $logo3=Confing::get('logo3');
@@ -85,6 +90,11 @@ class IndexController extends Controller
             'slide1'=>$slide1,
             'slide2'=>$slide2,
             'slide3'=>$slide3,
+            'slide4'=>$slide4,
+            'slide5'=>$slide5,
+            'slide6'=>$slide6,
+            'slide7'=>$slide7,
+            'slide8'=>$slide8,
             'logo1'=>$logo1,
             'logo2'=>$logo2,
             'logo3'=>$logo3,

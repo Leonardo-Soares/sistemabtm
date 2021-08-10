@@ -209,14 +209,14 @@ a
 {
     text-decoration: none;
 
-    color: #5e72e4;
+    color: black;
     background-color: transparent;
 }
 a:hover
 {
     text-decoration: none; 
 
-    color: #233dd2;
+    color: #ca4d4f;
 }
 
 a:not([href])
@@ -19966,6 +19966,7 @@ a.btn-icon-only
 .footer .copyright
 {
     font-size: .875rem;
+    text-align: center;
 }
 
 .footer-dark .col-footer .heading
@@ -22620,10 +22621,9 @@ textarea[resize='horizontal']
 
 .navbar .dropdown-menu
 {
-    margin: 0; 
-
+    margin-left: 40px;
     pointer-events: none;
-
+    width: 70%;
     opacity: 0;
 }
 
