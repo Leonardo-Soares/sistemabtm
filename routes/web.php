@@ -15,11 +15,15 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(); 
 
 Route::get('/home', 'HomeController@home')->name('home');
 
 Route::get('/', 'IndexController@index')->name('index');
+
+Route::get('/suporte', 'IndexController@suporte')->name('suporte');
+
+Route::get('/home', 'HomeController@home')->name('home');
 
 Route::post('/topo1', 'HomeController@topo1')->name('topo1');
 
@@ -36,6 +40,11 @@ Route::post('/associados', 'HomeController@associados')->name('associados');
 Route::post('/receita', 'HomeController@receita')->name('receita');
 
 Route::post('/footer', 'HomeController@footer')->name('footer');
+
+Route::get('/contact', 'EmailController@index');
+Route::post('/sendmail/send', 'EmailController@send');
+
+
 
 
 

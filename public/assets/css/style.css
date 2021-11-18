@@ -2176,12 +2176,17 @@ brands {
   }
 }
 
+
 @media (max-width: 500px){
   .gambiarra{
     visibility: hidden;
     display: inline;
   }
 }
+
+
+
+
 
 
   
