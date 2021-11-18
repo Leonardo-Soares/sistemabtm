@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         $telefone=Confing::get('telefone');
         $whatsapp=Confing::get('whatsapp');
+        $linkwhatsapp=Confing::get('linkwhatsapp');
         $instagram=Confing::get('instagram');
         $email=Confing::get('email');
         $facebook=Confing::get('facebook');
@@ -96,6 +97,7 @@ class HomeController extends Controller
         return view('home', [
         'telefone'=>$telefone,
         'whatsapp'=>$whatsapp,
+        'linkwhatsapp'=>$linkwhatsapp,
         'instagram'=>$instagram,
         'email'=>$email,
         'facebook'=>$facebook,
@@ -170,6 +172,7 @@ class HomeController extends Controller
         // dd($request);
         Confing::atualizar('telefone',$request->telefone);
         Confing::atualizar('whatsapp',$request->whatsapp);
+        Confing::atualizar('linkwhatsapp',$request->linkwhatsapp);
         Confing::atualizar('instagram',$request->instagram);
         Confing::atualizar('email',$request->email);
         Confing::atualizar('facebook',$request->facebook);

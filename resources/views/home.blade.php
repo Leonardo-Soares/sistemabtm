@@ -50,6 +50,7 @@
                     </nav> -->
                 </div>
           
+                <!-- MENU DO PAINEL -->
                 <div class="nav-wrapper">
                         <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
                             <li class="nav-item">
@@ -88,6 +89,12 @@
 
                             <li class="nav-item">
                                 <a class="nav-link mb-sm-3 mb-md-0 mt-2" id="tabs-icons-text-9-tab" data-toggle="tab" href="#tabs-icons-text-9" role="tab" aria-controls="tabs-icons-text-9" aria-selected="false">Rodapé</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a style="background-color: #1111;" class="nav-link  mb-sm-3 mb-md-0 mt-2" id="tabs-icons-text-10-tab" data-toggle="modal" data-target="#exampleModal" data-toggle="tab" href="#tabs-icons-text-10" role="tab" aria-controls="tabs-icons-text-10" aria-selected="false" >
+                                    Carreira
+                                </a>
                             </li>
                         </ul>
                 </div>
@@ -132,6 +139,16 @@
                                                 <div class="description col-md-6">
                                                     <label class="form-control-label" for="basic-url">WhatsApp</label>
                                                     <input name="whatsapp" value="{{$whatsapp}}" type="text" class="form-control">
+                                                </div>
+
+                                                <div class="description col-md-6">
+                                                    <label class="form-control-label" for="basic-url">Link WhatsApp (digite somente números)</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">https://api.whatsapp.com/send?phone=55</span>
+                                                        </div>
+                                                            <input name="linkwhatsapp" value="{{$linkwhatsapp}}" type="text" class="form-control">
+                                                    </div>
                                                 </div>
 
                                                 <div class="description col-md-6">

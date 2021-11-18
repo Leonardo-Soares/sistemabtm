@@ -11,9 +11,9 @@ class IndexController extends Controller
 {
 
     public function index(){
-        // dd(Confing::atualizar('telefone1','(99)99'));
         $telefone=Confing::get('telefone');
         $whatsapp=Confing::get('whatsapp');
+        $linkwhatsapp=Confing::get('linkwhatsapp');
         $email=Confing::get('email');
         $instagram=Confing::get('instagram');
         $facebook=Confing::get('facebook');
@@ -83,6 +83,7 @@ class IndexController extends Controller
         return view("index",[
             'telefone'=>$telefone,
             'whatsapp'=>$whatsapp,
+            'linkwhatsapp'=>$linkwhatsapp,
             'email'=>$email,
             'instagram'=>$instagram,
             'facebook'=>$facebook,

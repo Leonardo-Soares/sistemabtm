@@ -40,7 +40,7 @@
       </div>
       <div class="social-links">
         <a class="twitter"><i class="icofont-phone"></i> {{$telefone}} </a>
-        <a target="__blanck" href="" class="facebook"><i class="icofont-whatsapp"></i> {{$whatsapp}}</a>
+        <a target="__blanck" href="https://api.whatsapp.com/send?phone=55{{$linkwhatsapp}}" class="facebook"><i class="icofont-whatsapp"></i> {{$whatsapp}}</a>
         <a href="mailto:{{$email}}" class="facebook"><i class="icofont-envelope"></i> {{$email}} </a>
         <a target="__blanck" href="{{$instagram}}" class="instagram"><i class="icofont-instagram"></i></a>
         <a target="__blanck" href="{{$facebook}}" class="facebook"><i class="icofont-facebook"></i></a>
