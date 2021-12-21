@@ -28,7 +28,7 @@ class EmailController extends Controller
             'message' => $request->message,
         );
         
-        Mail::to('leolass1010@gmail.com')->send(new sendingMail($data));
+        Mail::to('contato@btmdistribuidora.com.br')->send(new sendingMail($data));
         $request->session()->flash('message', 'Obrigado');
         return redirect('/');
     }

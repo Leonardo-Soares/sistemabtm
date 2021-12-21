@@ -79,6 +79,8 @@ class HomeController extends Controller
         $receita7=Confing::get('receita7');
         $receita8=Confing::get('receita8');
         $receita9=Confing::get('receita9');
+        $receita10=Confing::get('receita10');
+        $receita11=Confing::get('receita11');
         $footer1=Confing::get('footer1');
         $footer2=Confing::get('footer2');
         $footer3=Confing::get('footer3');
@@ -149,6 +151,8 @@ class HomeController extends Controller
         'receita7'=>$receita7,
         'receita8'=>$receita8,
         'receita9'=>$receita9,
+        'receita10'=>$receita10,
+        'receita11'=>$receita11,
         'footer1'=>$footer1,
         'footer2'=>$footer2,
         'footer3'=>$footer3,
@@ -406,6 +410,9 @@ class HomeController extends Controller
             $path = $request->receita9->storeAs('public/images', "receita9.$extension");
             Confing::atualizar('receita9',$path);
         }
+
+        Confing::atualizar('receita10',$request->receita10);
+        Confing::atualizar('receita11',$request->receita11);
 
         return redirect()->back();
 

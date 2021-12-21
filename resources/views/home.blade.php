@@ -145,7 +145,7 @@
                                                     <label class="form-control-label" for="basic-url">Link WhatsApp (digite somente números)</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <span class="input-group-text">https://api.whatsapp.com/send?phone=55</span>
+                                                            <span class="input-group-text">Link WhatsApp</span>
                                                         </div>
                                                             <input name="linkwhatsapp" value="{{$linkwhatsapp}}" type="text" class="form-control">
                                                     </div>
@@ -171,9 +171,11 @@
                                                     <input name="boleto" value="{{$boleto}}" type="text" class="form-control" placeholder="2 Via Boleto">
                                                 </div>
 
-                                                <button class="btn btn-icon btn-primary" style="margin: auto;" type="subimt">
-                                                    <span class="btn-inner--text">Atualizar</span>
-                                                </button>
+                                                <div class="col-12 text-center">
+                                                    <button class="btn btn-icon btn-primary" type="subimt">
+                                                        <span class="btn-inner--text">Atualizar</span>
+                                                    </button>
+                                                </div>
 
                                             </div>
                                         </form>
@@ -564,7 +566,7 @@
                                         </form>
                                     </div>
 
-                                    <!-- PAINEL 8 -->
+                                    <!-- RECEITA -->
                                     <div class="tab-pane fade" id="tabs-icons-text-8" role="tabpanel" aria-labelledby="tabs-icons-text-8-tab">
                                         <form action="{{route('receita')}}" enctype="multipart/form-data" method="post">
                                             <div class="row">
@@ -591,23 +593,33 @@
                                                 </div>
 
                                                 <div class="description col-md-6">
-                                                    <label class="form-control-label" for="basic-url">Texto</label>
-                                                    <input style="margin-bottom: 20px;" name="receita5" value="{{$receita5}}" type="text" class="form-control" >
-                                                </div>
-
-                                                <div class="description col-md-6">
-                                                    <label class="form-control-label" for="basic-url">Titulo 3</label>
+                                                    <label class="form-control-label" for="basic-url">Titulo Ingredientes</label>
                                                     <input style="margin-bottom: 20px;" name="receita6" value="{{$receita6}}" type="text" class="form-control" >
                                                 </div>
 
                                                 <div class="description col-md-6">
-                                                    <label class="form-control-label" for="basic-url">Titulo 4</label>
+                                                    <label class="form-control-label" for="basic-url">Ingredientes</label>
+                                                    <textarea  name="receita5" rows="5"  class="form-control" style="margin-bottom: 20px;" > {{$receita5}} </textarea>
+                                                </div>
+
+                                                <div class="description col-md-6">
+                                                    <label class="form-control-label" for="basic-url">Titulo Modo de Preparo</label>
                                                     <input style="margin-bottom: 20px;" name="receita7" value="{{$receita7}}" type="text" class="form-control" >
+                                                </div>
+
+                                                <div class="description col-md-6">
+                                                    <label class="form-control-label" for="basic-url">Modo de Preparo</label>
+                                                    <textarea  name="receita10" rows="5"  class="form-control" style="margin-bottom: 20px;" > {{$receita10}} </textarea>
                                                 </div>
 
                                                 <div class="description col-md-6">
                                                     <label class="form-control-label" for="basic-url">Botão</label>
                                                     <input style="margin-bottom: 20px;" name="receita8" value="{{$receita8}}" type="text" class="form-control" >
+                                                </div>
+
+                                                <div class="description col-md-6">
+                                                    <label class="form-control-label" for="basic-url">Link do Botão</label>
+                                                    <input style="margin-bottom: 20px;" name="receita11" value="{{$receita11}}" type="text" class="form-control" >
                                                 </div>
 
                                                 <div class="description col-md-6">
