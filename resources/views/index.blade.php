@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Btm - Distribuidora</title>
-  <meta content="Btm - Distribuidora" name="description">
-  <meta content="Btm - Distribuidora" name="keywords">
-
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-</head>
+@extends('layouts.head')
 
 <body>
 
@@ -54,7 +23,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <a href="#" class="logo mr-auto">
-        <img src="{{Storage::url($logo1)}}"  alt="">
+        <img src="{{Storage::url($logo1)}}"  alt="ogo btm distribuidora">
       </a>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -68,35 +37,72 @@
     </div>
   </header>
   <!-- End MENU -->
-
-  <!-- INICIO -->
-  <section id="hero" class="hero d-flex align-items-center" style="padding: 0px; background: url({{Storage::url($slide2)}}) top left">
-    <div class="container">
-      <div class="row">
-
-        <div class="div-img1 col-md-12">
-          <h1 id="txt-mobile1" data-aos="fade-up" class="aos-init aos-animate">
-            {{$slide4}} <b> {{$slide5}} <br> {{$slide6}} </b> {{$slide7}} <span> {{$slide8}} </span>
-          </h1>
+ 
+  {{-- CARROSEL WEB --}}
+  <span class="carrousel-web">
+    <section id="hero" class="hero d-flex align-items-center">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="titulo-carrosel">
+              <h1> TRABALHAMOS <b> DISTRIBUINDO </b> </h1>
+            </div>
+            <div class="titulo-carrosel-segundo">
+              <h1> <b> FELICIDADE E</b> <span style="color:rgb(241, 248, 12)"> BOM GOSTO </span> </h1>
+            </div>
+            <img src="assets/img/teste.png" class="d-block w-100 h-100" alt="btm distribuidora">
+          </div>
+          <div class="carousel-item">
+            <img src=" {{Storage::url($slide2)}}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=" {{Storage::url($slide2)}}" class="d-block w-100" alt="...">
+          </div>
         </div>
-
-        <div class="div-img2 col-lg-6 col-md-6 col-sm-6 d-flex flex-column justify-content-center">
-
-          <h1 id="txt-web1" data-aos="fade-up" class="aos-init aos-animate">
-            {{$slide4}} <b> {{$slide5}} <br> {{$slide6}} </b> {{$slide7}} <span> {{$slide8}} </span>
-          </h1>
-
-          <img id="img2" src="{{Storage::url($slide1)}}" class="img-fluid" alt="">
-        </div>
-
-        <div class="col-lg-6 col-md-6 col-sm-6 col-12 hero-img aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
-          <img id="img1" src="{{Storage::url($slide3)}}" class="img-fluid" alt="">
-        </div>
-
+        <button class="carousel-control-prev next-carrosel" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"><i class="icofont-circled-left"></i></span>
+          <span class="sr-only">Anterior</span>
+        </button>
+        <button class="carousel-control-next next-carrosel mr-2" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"><i class="icofont-circled-right"></i></span>
+          <span class="sr-only">Proxímo</span>
+        </button>
       </div>
-    </div>
-  </section>
-  <!-- FIM INICIO -->
+    </section>
+  </span>
+
+  {{-- CARROSEL MOBILE --}}
+  <span class="carrousel-mobile">
+    <section id="hero" class="hero d-flex align-items-center">
+      <div id="carroselmobile" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="titulo-carrosel">
+              <h1> TRABALHAMOS <b> DISTRIBUINDO </b> </h1>
+            </div>
+            <div class="titulo-carrosel-segundo">
+              <h1> <b> FELICIDADE E</b> <span style="color:rgb(241, 248, 12)"> BOM GOSTO </span> </h1>
+            </div>
+            <img src="assets/img/teste2.png" class="img-fluid" alt="btm distribuidora">
+          </div>
+          <div class="carousel-item">
+            <img src=" {{Storage::url($slide2)}}" class="img-fluid" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=" {{Storage::url($slide2)}}" class="img-fluid" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev next-carrosel" type="button" data-target="#carroselmobile" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"><i class="icofont-circled-left"></i></span>
+          <span class="sr-only">Anterior</span>
+        </button>
+        <button class="carousel-control-next next-carrosel mr-2" type="button" data-target="#carroselmobile" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"><i class="icofont-circled-right"></i></span>
+          <span class="sr-only">Proxímo</span>
+        </button>
+      </div>
+    </section>
+  </span>
 
   <main id="main">
 
@@ -482,98 +488,14 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 footer-contact" style="text-align: center;">
-            <img src="{{Storage::url($footer13)}}" style="width: 200px;" alt="">
-            <div class="social-links mt-3">
-            {!!$footer1 == '' ? '' :"<a target='_blank' href='$footer1' class='facebook'><i style='font-size: 30px;' class='bx bxl-facebook'></i></a>"!!}
-            {!!$footer2 == '' ? '' :"<a target='_blank' href='$footer2' class='instagram'><i style='font-size: 30px;' class='bx bxl-instagram'></i></a>"!!}
-            {!!$footer3 == '' ? '' :"<a target='_blank' href='$footer3' class='twitter'><i style='font-size: 30px;' class='bx bxl-twitter'></i></a>"!!}
-            {!!$footer4 == '' ? '' :"<a target='_blank' href='$footer4' class='google-plus'><i style='font-size: 30px;' class='bx bxl-skype'></i></a>"!!}
-            {!!$footer5 == '' ? '' :"<a target='_blank' href='$footer5' class='linkedin'><i style='font-size: 30px;' class='bx bxl-linkedin'></i></a>"!!}
-            {!!$footer6 == '' ? '' :"<a target='_blank' href='$footer6' class='linkedin'><i style='font-size: 30px;' class='bx bxl-youtube'></i></a>"!!}
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links">
-            <div class="descircao-contato">
-              <p> {{$footer7}} </p>
-              <p> {{$footer8}} <br>
-              {{$footer9}} </p>
-              <p> {{$footer10}} <br>
-              {{$footer11}} <br>
-              {{$footer12}}</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-links">        
-              @if (count($errors) > 0)
-                  <div class="alert alert-danger">
-                      <button type="button" class="close" data-dismiss="alert">×</button>
-                      <ul>
-                          @foreach ($errors->all() as $error)
-                              <li>{{ $error }}</li>
-                          @endforeach
-                      </ul>
-                  </div>
-              @endif
-
-              @if (!empty($message))
-                  <div class="alert alert-success alert-block">
-                      <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>{{ $message }}</strong>
-                  </div>
-              @endif
-
-
-            <form method="POST" action="{{url('sendmail/send')}}">
-              @csrf
-              <div class="form-group">
-                <input class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" type="text" placeholder="Nome">
-              </div>
-              <div class="form-group">
-                <input class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" type="email" placeholder="E-mail">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Mensagem" rows="3"></textarea>
-              </div>
-              <div class="submit-form">
-                <button type="submit" class="btn btn-form">Enviar</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </footer>
+  @extends('layouts.footer')
   <!-- End Footer -->
 
   <!-- <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+    @extends('layouts.scripts')
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- INSTAGRAM -->
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 
 </html>
