@@ -40,11 +40,21 @@ class HomeController extends Controller
         $slide1=Confing::get('slide1');
         $slide2=Confing::get('slide2');
         $slide3=Confing::get('slide3');
-        $slide4=Confing::get('slide4');
-        $slide5=Confing::get('slide5');
-        $slide6=Confing::get('slide6');
-        $slide7=Confing::get('slide7');
-        $slide8=Confing::get('slide8');
+        $mobileslide1=Confing::get('mobileslide1');
+        $mobileslide2=Confing::get('mobileslide2');
+        $mobileslide3=Confing::get('mobileslide3');
+        $slide1titulo1=Confing::get('slide1titulo1');
+        $slide1titulo2=Confing::get('slide1titulo2');
+        $slide1titulo3=Confing::get('slide1titulo3');
+        $slide1titulo4=Confing::get('slide1titulo4');
+        $slide2titulo1=Confing::get('slide2titulo1');
+        $slide2titulo2=Confing::get('slide2titulo2');
+        $slide2titulo3=Confing::get('slide2titulo3');
+        $slide2titulo4=Confing::get('slide2titulo4');
+        $slide3titulo1=Confing::get('slide3titulo1');
+        $slide3titulo2=Confing::get('slide3titulo2');
+        $slide3titulo3=Confing::get('slide3titulo3');
+        $slide3titulo4=Confing::get('slide3titulo4');
         $rodapeslide1=Confing::get('rodapeslide1');
         $rodapeslide2=Confing::get('rodapeslide2');
         $rodapeslide3=Confing::get('rodapeslide3');
@@ -112,11 +122,21 @@ class HomeController extends Controller
         'slide1'=>$slide1,
         'slide2'=>$slide2,
         'slide3'=>$slide3,
-        'slide4'=>$slide4,
-        'slide5'=>$slide5,
-        'slide6'=>$slide6,
-        'slide7'=>$slide7,
-        'slide8'=>$slide8,
+        'mobileslide1'=>$mobileslide1,
+        'mobileslide2'=>$mobileslide2,
+        'mobileslide3'=>$mobileslide3,
+        'slide1titulo1'=>$slide1titulo1,
+        'slide1titulo2'=>$slide1titulo2,
+        'slide1titulo3'=>$slide1titulo3,
+        'slide1titulo4'=>$slide1titulo4,
+        'slide2titulo1'=>$slide2titulo1,
+        'slide2titulo2'=>$slide2titulo2,
+        'slide2titulo3'=>$slide2titulo3,
+        'slide2titulo4'=>$slide2titulo4,
+        'slide3titulo1'=>$slide3titulo1,
+        'slide3titulo2'=>$slide3titulo2,
+        'slide3titulo3'=>$slide3titulo3,
+        'slide3titulo4'=>$slide3titulo4,
         'rodapeslide1'=>$rodapeslide1,
         'rodapeslide2'=>$rodapeslide2,
         'rodapeslide3'=>$rodapeslide3,
@@ -173,7 +193,6 @@ class HomeController extends Controller
 
     public function topo1(Request $request)
     {
-        // dd($request);
         Confing::atualizar('telefone',$request->telefone);
         Confing::atualizar('whatsapp',$request->whatsapp);
         Confing::atualizar('linkwhatsapp',$request->linkwhatsapp);
@@ -182,13 +201,11 @@ class HomeController extends Controller
         Confing::atualizar('facebook',$request->facebook);
         Confing::atualizar('boleto',$request->boleto);
         
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
     }
 
     public function slide(Request $request)
     {
-        // dd($request->slide1);
-
         if ($request->hasFile('slide1')) 
         {
             $extension = $request->slide1->extension();
@@ -210,19 +227,46 @@ class HomeController extends Controller
             Confing::atualizar('slide3',$path);
         }
 
-        Confing::atualizar('slide4',$request->slide4);
-        Confing::atualizar('slide5',$request->slide5);
-        Confing::atualizar('slide6',$request->slide6);
-        Confing::atualizar('slide7',$request->slide7);
-        Confing::atualizar('slide8',$request->slide8);
+        if ($request->hasFile('mobileslide1')) 
+        {
+            $extension = $request->mobileslide1->extension();
+            $path = $request->mobileslide1->storeAs('public/images', "mobileslide1.$extension");
+            Confing::atualizar('mobileslide1',$path);
+        }
 
-        return redirect()->back();
+        if ($request->hasFile('mobileslide2')) 
+        {
+            $extension = $request->mobileslide2->extension();
+            $path = $request->mobileslide2->storeAs('public/images', "mobileslide2.$extension");
+            Confing::atualizar('mobileslide2',$path);
+        }
+        
+        if ($request->hasFile('mobileslide3')) 
+        {
+            $extension = $request->mobileslide3->extension();
+            $path = $request->mobileslide3->storeAs('public/images', "mobileslide3.$extension");
+            Confing::atualizar('mobileslide3',$path);
+        }
+
+        Confing::atualizar('slide1titulo1',$request->slide1titulo1);
+        Confing::atualizar('slide1titulo2',$request->slide1titulo2);
+        Confing::atualizar('slide1titulo3',$request->slide1titulo3);
+        Confing::atualizar('slide1titulo4',$request->slide1titulo4);
+        Confing::atualizar('slide2titulo1',$request->slide2titulo1);
+        Confing::atualizar('slide2titulo2',$request->slide2titulo2);
+        Confing::atualizar('slide2titulo3',$request->slide2titulo3);
+        Confing::atualizar('slide2titulo4',$request->slide2titulo4);
+        Confing::atualizar('slide3titulo1',$request->slide3titulo1);
+        Confing::atualizar('slide3titulo2',$request->slide3titulo2);
+        Confing::atualizar('slide3titulo3',$request->slide3titulo3);
+        Confing::atualizar('slide3titulo4',$request->slide3titulo4);
+
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
         
     }
 
     public function logo(Request $request)
     {
-        // dd($request);
         if ($request->hasFile('logo1')) 
         {
             $extension = $request->logo1->extension();
@@ -236,13 +280,12 @@ class HomeController extends Controller
         Confing::atualizar('logo5',$request->logo5);
 
 
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
 
     }
 
     public function rodapeslide(Request $request)
     {
-        // dd($request);
         if ($request->hasFile('rodapeslide1')) 
         {
             $extension = $request->rodapeslide1->extension();
@@ -269,13 +312,12 @@ class HomeController extends Controller
         Confing::atualizar('rodapeslide6',$request->rodapeslide6);
 
 
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
 
     }
 
     public function menu(Request $request)
     {
-        // dd($request);
         if ($request->hasFile('menu1')) 
         {
             $extension = $request->menu1->extension();
@@ -289,13 +331,12 @@ class HomeController extends Controller
         Confing::atualizar('menu5',$request->menu5);
 
 
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
 
     }
 
     public function associados(Request $request)
     {
-        // dd($request);
         if ($request->hasFile('associados1')) 
         {
             $extension = $request->associados1->extension();
@@ -387,14 +428,12 @@ class HomeController extends Controller
 
 
 
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
 
     }
 
     public function receita(Request $request)
     {
-        // dd($request);
-
         Confing::atualizar('receita1',$request->receita1);        
         Confing::atualizar('receita2',$request->receita2);
         Confing::atualizar('receita3',$request->receita3);
@@ -414,14 +453,12 @@ class HomeController extends Controller
         Confing::atualizar('receita10',$request->receita10);
         Confing::atualizar('receita11',$request->receita11);
 
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
 
     }
 
     public function footer(Request $request)
     {
-        // dd($request);
-
         Confing::atualizar('footer1',$request->footer1);        
         Confing::atualizar('footer2',$request->footer2);
         Confing::atualizar('footer3',$request->footer3);
@@ -443,12 +480,8 @@ class HomeController extends Controller
             Confing::atualizar('footer13',$path);
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
 
     }
-
- 
-
-    
 
 }

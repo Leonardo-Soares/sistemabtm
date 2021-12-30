@@ -43,21 +43,37 @@
     <section id="hero" class="hero d-flex align-items-center">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+
           <div class="carousel-item active">
             <div class="titulo-carrosel">
-              <h1> TRABALHAMOS <b> DISTRIBUINDO </b> </h1>
+              <h1> {{$slide1titulo1}} <b> {{$slide1titulo2}} </b> </h1>
             </div>
             <div class="titulo-carrosel-segundo">
-              <h1> <b> FELICIDADE E</b> <span style="color:rgb(241, 248, 12)"> BOM GOSTO </span> </h1>
+              <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
             </div>
-            <img src="assets/img/teste.png" class="d-block w-100 h-100" alt="btm distribuidora">
+            <img src=" {{Storage::url($slide1)}} " class="d-block w-100 h-100" alt="btm distribuidora">
           </div>
+          
           <div class="carousel-item">
-            <img src=" {{Storage::url($slide2)}}" class="d-block w-100" alt="...">
+            <div class="titulo-carrosel">
+              <h1> {{$slide2titulo1}} <b> {{$slide2titulo2}} </b> </h1>
+            </div>
+            <div class="titulo-carrosel-segundo">
+              <h1> <b> {{$slide2titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide2titulo4}} </span> </h1>
+            </div>
+            <img src=" {{Storage::url($slide2)}} " class="d-block w-100" alt="btm distribuidora">
           </div>
+
           <div class="carousel-item">
-            <img src=" {{Storage::url($slide2)}}" class="d-block w-100" alt="...">
+            <div class="titulo-carrosel">
+              <h1> {{$slide3titulo1}} <b> {{$slide3titulo2}} </b> </h1>
+            </div>
+            <div class="titulo-carrosel-segundo">
+              <h1> <b> {{$slide3titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide3titulo4}} </span> </h1>
+            </div>
+            <img src=" {{Storage::url($slide2)}} " class="d-block w-100" alt="btm distribuidora">
           </div>
+
         </div>
         <button class="carousel-control-prev next-carrosel" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"><i class="icofont-circled-left"></i></span>
@@ -78,18 +94,30 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="titulo-carrosel">
-              <h1> TRABALHAMOS <b> DISTRIBUINDO </b> </h1>
+              <h1> {{$slide1titulo1}} <b> {{$slide1titulo2}} </b> </h1>
             </div>
             <div class="titulo-carrosel-segundo">
-              <h1> <b> FELICIDADE E</b> <span style="color:rgb(241, 248, 12)"> BOM GOSTO </span> </h1>
+              <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
             </div>
-            <img src="assets/img/teste2.png" class="img-fluid" alt="btm distribuidora">
+            <img src=" {{Storage::url($mobileslide1)}} " class="img-fluid" alt="btm distribuidora">
           </div>
           <div class="carousel-item">
-            <img src=" {{Storage::url($slide2)}}" class="img-fluid" alt="...">
+            <div class="titulo-carrosel">
+              <h1> {{$slide1titulo1}} <b> {{$slide1titulo2}} </b> </h1>
+            </div>
+            <div class="titulo-carrosel-segundo">
+              <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
+            </div>
+            <img src=" {{Storage::url($mobileslide2)}} " class="img-fluid" alt="...">
           </div>
           <div class="carousel-item">
-            <img src=" {{Storage::url($slide2)}}" class="img-fluid" alt="...">
+            <div class="titulo-carrosel">
+              <h1> {{$slide1titulo1}} <b> {{$slide1titulo2}} </b> </h1>
+            </div>
+            <div class="titulo-carrosel-segundo">
+              <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
+            </div>
+            <img src=" {{Storage::url($mobileslide3)}} " class="img-fluid" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev next-carrosel" type="button" data-target="#carroselmobile" data-slide="prev">
@@ -494,7 +522,7 @@
   <!-- <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
 
-    @extends('layouts.scripts')
+  @extends('layouts.scripts')
 
 </body>
 

@@ -79,7 +79,7 @@
             @yield('content')
         </main>
     </div>
-    
-    
+
+    @extends('layouts.scripts')
 </body>
 </html>
