@@ -41,6 +41,7 @@ class IndexController extends Controller
         $logo3=Confing::get('logo3');
         $logo4=Confing::get('logo4');
         $logo5=Confing::get('logo5');
+        $logo6=Confing::get('logo6');
         $rodapeslide1=Confing::get('rodapeslide1');
         $rodapeslide2=Confing::get('rodapeslide2');
         $rodapeslide3=Confing::get('rodapeslide3');
@@ -123,6 +124,7 @@ class IndexController extends Controller
             'logo3'=>$logo3,
             'logo4'=>$logo4,
             'logo5'=>$logo5,
+            'logo6'=>$logo6,
             'rodapeslide1'=>$rodapeslide1,
             'rodapeslide2'=>$rodapeslide2,
             'rodapeslide3'=>$rodapeslide3,

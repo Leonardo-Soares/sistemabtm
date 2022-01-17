@@ -6,12 +6,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Btm - Distribuidora</title>
-  <meta content="Btm - Distribuidora" name="description">
-  <meta content="Btm - Distribuidora" name="keywords">
+  <meta content="Olá seja bem vindo(a) Hoje você terá a oportunidade de conhecer uma das maiores distribuidoras do Norte do País. A Distribuidora BTM, está no mercado a quase 30 anos. Sendo líder na tradição de manter vivo o mercado, levando ao empreendedor o que há de melhor em produtos de alimentos e cosméticos. " name="description">
+  <meta content="Btm Distribuidora, btmdistribuidora, distribuição, btm norte" name="keywords">
+  <meta property="og:image" itemprop="image" content="http://btmdistribuidora.com.br/assets/img/logo.jpg">
 
   <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link href="/assets/img/logo2.png" rel="icon">
+  <link href="/assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">

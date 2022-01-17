@@ -23,14 +23,14 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <a href="#" class="logo mr-auto">
-        <img src="{{Storage::url($logo1)}}"  alt="ogo btm distribuidora">
+        <img src="{{ $logo1 }}"  alt="ogo btm distribuidora">
       </a>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li ><a href="#section1">{{$logo2}}</a></li>
           <li><a href="" data-toggle="modal" data-target="#construcao">{{$logo3}}</a></li>
           <li><a href="#parceiros">{{$logo4}}</a></li>
-          <li><a href="#receita">RECEITAS</a></li>
+          <li><a href="#receita">{{$logo6}}</a></li>
           <li><a href="" data-toggle="modal" data-target="#construcao">{{$logo5}}</a></li>
         </ul>
       </nav>
@@ -99,7 +99,7 @@
             <div class="titulo-carrosel-segundo">
               <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
             </div>
-            <img src=" {{Storage::url($mobileslide1)}} " class="img-fluid" alt="btm distribuidora">
+            <img src=" {{ $mobileslide1 }} " class="img-fluid" alt="btm distribuidora">
           </div>
           <div class="carousel-item">
             <div class="titulo-carrosel">
@@ -108,7 +108,7 @@
             <div class="titulo-carrosel-segundo">
               <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
             </div>
-            <img src=" {{Storage::url($mobileslide2)}} " class="img-fluid" alt="...">
+            <img src=" {{ $mobileslide2 }} " class="img-fluid" alt="...">
           </div>
           <div class="carousel-item">
             <div class="titulo-carrosel">
@@ -117,7 +117,7 @@
             <div class="titulo-carrosel-segundo">
               <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
             </div>
-            <img src=" {{Storage::url($mobileslide3)}} " class="img-fluid" alt="...">
+            <img src=" {{ $mobileslide3 }} " class="img-fluid" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev next-carrosel" type="button" data-target="#carroselmobile" data-slide="prev">
@@ -160,7 +160,7 @@
           <div class="section-icons1 col-md-12 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-0">
               <div class="col-lg-3">
                 <div class="icon" style="text-align: center;">
-                  <img class="icones-svg"  src="{{Storage::url($rodapeslide1)}}" alt="">
+                  <img class="icones-svg"  src="{{ $rodapeslide1 }}" alt="">
                 </div>
               </div>
               <div class="col-lg-10 ropae-slide">
@@ -172,7 +172,7 @@
           <div class="section-icons1 col-md-12 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-0" >
             <div class="col-lg-3">
               <div class="icon" style="text-align: center;">
-                <img  class="icones-svg" src="{{Storage::url($rodapeslide2)}}" alt="">
+                <img  class="icones-svg" src="{{ $rodapeslide2 }}" alt="">
               </div>
             </div>
             <div class="col-lg-10 ropae-slide">
@@ -183,7 +183,7 @@
           <div class="section-icons2 col-md-12 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-0" >
             <div class="col-lg-3">
               <div class="icon" style="text-align: center;">
-                <img  class="icones-svg" src="{{Storage::url($rodapeslide3)}}" alt="">
+                <img  class="icones-svg" src="{{ $rodapeslide3 }}" alt="">
               </div>
             </div>
             <div class="col-lg-10 ropae-slide">
@@ -200,7 +200,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="{{Storage::url($menu1)}}" class="img-fluid" alt="">
+            <img src="{{ $menu1 }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
             data-aos-delay="100">
@@ -227,12 +227,9 @@
           style="margin-top:  25px; margin-bottom: 25px;">
 
           <ol class="carousel-indicators" style="bottom: -60px;">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
-              style="background-color: rgb(0, 0, 0)"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1" style="background-color: rgb(0, 0, 0)">
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2" style="background-color: rgb(0, 0, 0)">
-            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="background-color: rgb(0, 0, 0)"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" style="background-color: rgb(0, 0, 0)"> </li>
           </ol>
 
           <div class="carousel-inner">
@@ -243,18 +240,18 @@
             <div class="carousel-item active">
               <div class="card-deck" style="margin: auto 0; ">
                 <div class="card" style="border: none; padding-top: 15px; background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados1)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados1 }}" class="card-img-top" alt="...">
                 </div>
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados2)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados2 }}" class="card-img-top" alt="...">
 
                 </div>
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados3)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados3 }}" class="card-img-top" alt="...">
                 </div>
 
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados4)}}" class="card-img-top " alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados4 }}" class="card-img-top " alt="...">
                 </div>
               </div>
             </div>
@@ -262,18 +259,18 @@
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados5)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados5 }}" class="card-img-top" alt="...">
                 </div>
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados6)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados6 }}" class="card-img-top" alt="...">
 
                 </div>
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados7)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados7 }}" class="card-img-top" alt="...">
                 </div>
 
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados8)}}" class="card-img-top " alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados8 }}" class="card-img-top " alt="...">
                 </div>
               </div>
             </div>
@@ -281,18 +278,18 @@
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados9)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados9 }}" class="card-img-top" alt="...">
                 </div>
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados10)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados10 }}" class="card-img-top" alt="...">
 
                 </div>
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados11)}}" class="card-img-top" alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados11 }}" class="card-img-top" alt="...">
                 </div>
 
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px;" src="{{Storage::url($associados12)}}" class="card-img-top " alt="...">
+                  <img style="max-width: 200px;" src="{{ $associados12 }}" class="card-img-top " alt="...">
                 </div>
               </div>
             </div>
@@ -307,18 +304,22 @@
     <!-- CARROSEL PARCEIROS MOBILE -->
     <section class="about layout-mobile-pacreiros"  id="parceiros" style="background-color: rgb(221, 221, 221);">
       <div class="container aos-init aos-animate" data-aos="fade-up">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel"
           style="margin-top:  25px; margin-bottom: 50px;">
 
           <ol class="carousel-indicators" style="bottom: -60px;">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
-              style="background-color: rgb(0, 0, 0)"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1" style="background-color: rgb(0, 0, 0)">
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2" style="background-color: rgb(0, 0, 0)">
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3" style="background-color: rgb(0, 0, 0)">
-            </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active" style="background-color: rgb(0, 0, 0)"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="1" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="2" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="3" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="4" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="5" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="6" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="7" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="8" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="9" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="10" style="background-color: rgb(0, 0, 0)"> </li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="11" style="background-color: rgb(0, 0, 0)"> </li>
           </ol>
 
           <div class="carousel-inner">
@@ -326,10 +327,30 @@
               {{$associados13}} <span style="font-weight: bold;">{{$associados14}}</span>
             </h1>
 
-            <div class="carousel-item active">
+            <div class="carousel-item active" >
               <div class="card-deck" style="margin: auto 0; ">
                 <div class="card" style="border: none; padding-top: 15px; background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados1)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados1 }}"
+                    class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+              <div class="card-deck" style="margin: auto 0; ">
+                <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados2 }}"
+                    class="card-img-top" alt="...">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card-deck" style="margin: auto 0; ">
+                <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados3 }}"
                     class="card-img-top" alt="...">
                 </div>
               </div>
@@ -338,27 +359,7 @@
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados2)}}"
-                    class="card-img-top" alt="...">
-
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="card-deck" style="margin: auto 0; ">
-                <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados3)}}"
-                    class="card-img-top" alt="...">
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="card-deck" style="margin: auto 0; ">
-
-                <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados4)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados4 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -366,9 +367,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados5)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados5 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -376,9 +376,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados6)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados6 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -386,9 +385,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados7)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados7 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -396,9 +394,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados8)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados8 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -406,9 +403,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados9)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados9 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -416,9 +412,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados10)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados10 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -426,9 +421,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados11)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados11 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -436,9 +430,8 @@
 
             <div class="carousel-item">
               <div class="card-deck" style="margin: auto 0; ">
-
                 <div class="card" style="border: none; padding-top: 15px;  background-color: unset">
-                  <img style="max-width: 200px; margin: auto;" src="{{Storage::url($associados12)}}"
+                  <img style="max-width: 200px; margin: auto;" src="{{ $associados12 }}"
                     class="card-img-top " alt="...">
                 </div>
               </div>
@@ -467,7 +460,6 @@
 
         <h1 style="margin-bottom: 40px; text-align: center; color: #000000; text-transform: uppercase; "> {{$receita1}} <span style="font-weight: bold;"> {{$receita2}} </span> </h1>
 
-
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-top" data-aos="fade-up"  data-aos-delay="100">
               <h3 style="text-transform: uppercase; padding-left: 25px;">  {{$receita3}} <span style="color: rgb(66, 164, 177);"> {{$receita4}} </h3></span> </h3>
@@ -486,14 +478,9 @@
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 content d-flex flex-column justify-content-center" data-aos="zoom-out" data-aos-delay="100">
-              <img src="{{Storage::url($receita9)}}" style="margin: auto;" class="img-fluid" alt="">
+              <img src="{{ $receita9 }}" style="margin: auto;" class="img-fluid" alt="">
             </div>
-
           </div>
-
-
-
-
       </div>
     </section>
     <!-- FIM RECEITA -->
@@ -505,7 +492,7 @@
         <div id="carouselExampleIndicators2" class=" carousel slide" data-ride="carousel" style="margin-bottom: 25px; margin-top: 25px;">
 
           <h1 style="margin-bottom: 40px; text-align: center; color: #000000; text-transform: uppercase; ">Feed do <span style="font-weight: bold;">Instagram</span></h1>
-          <div class="elfsight-app-5afc8908-93fd-496d-8d25-e867b8e499f3"></div>
+          <div class="elfsight-app-7d92ceb8-f5b9-4169-8cc4-ea49f320e79d"></div>
 
         </div>
       </div>

@@ -2,9 +2,9 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
+          
           <div class="col-lg-4 col-md-6 footer-contact" style="text-align: center;">
-            <img src="{{Storage::url($footer13)}}" style="width: 200px;" alt="">
+            <img src="{{ $footer13 }}" style="width: 200px;" alt="">
             <div class="social-links mt-3">
             {!!$footer1 == '' ? '' :"<a target='_blank' href='$footer1' class='facebook'><i style='font-size: 30px;' class='bx bxl-facebook'></i></a>"!!}
             {!!$footer2 == '' ? '' :"<a target='_blank' href='$footer2' class='instagram'><i style='font-size: 30px;' class='bx bxl-instagram'></i></a>"!!}
