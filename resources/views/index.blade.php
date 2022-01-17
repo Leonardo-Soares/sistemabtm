@@ -37,7 +37,7 @@
     </div>
   </header>
   <!-- End MENU -->
- 
+
   {{-- CARROSEL WEB --}}
   <span class="carrousel-web">
     <section id="hero" class="hero d-flex align-items-center">
@@ -51,9 +51,9 @@
             <div class="titulo-carrosel-segundo">
               <h1> <b> {{$slide1titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide1titulo4}} </span> </h1>
             </div>
-            <img src=" {{Storage::url($slide1)}} " class="d-block w-100 h-100" alt="btm distribuidora">
+            <img src="{{$slide1}}" class="d-block w-100 h-100" alt="btm distribuidora">
           </div>
-          
+
           <div class="carousel-item">
             <div class="titulo-carrosel">
               <h1> {{$slide2titulo1}} <b> {{$slide2titulo2}} </b> </h1>
@@ -61,7 +61,7 @@
             <div class="titulo-carrosel-segundo">
               <h1> <b> {{$slide2titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide2titulo4}} </span> </h1>
             </div>
-            <img src=" {{Storage::url($slide2)}} " class="d-block w-100" alt="btm distribuidora">
+            <img src=" {{$slide2}} " class="d-block w-100" alt="btm distribuidora">
           </div>
 
           <div class="carousel-item">
@@ -71,7 +71,7 @@
             <div class="titulo-carrosel-segundo">
               <h1> <b> {{$slide3titulo3}}</b> <span style="color:rgb(241, 248, 12)"> {{$slide3titulo4}} </span> </h1>
             </div>
-            <img src=" {{Storage::url($slide2)}} " class="d-block w-100" alt="btm distribuidora">
+            <img src=" {{ $slide2 }} " class="d-block w-100" alt="btm distribuidora">
           </div>
 
         </div>
@@ -145,7 +145,7 @@
           <div class="modal-body" style="text-align: center;">
             <h1>EM CONSTRUÇÃO</h1>
           </div>
-          <div class="modal-footer" > 
+          <div class="modal-footer" >
             <button style="margin: auto;" type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           </div>
         </div>
@@ -467,7 +467,7 @@
 
         <h1 style="margin-bottom: 40px; text-align: center; color: #000000; text-transform: uppercase; "> {{$receita1}} <span style="font-weight: bold;"> {{$receita2}} </span> </h1>
 
-          
+
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 pt-4 pt-lg-0 content d-flex flex-column justify-content-top" data-aos="fade-up"  data-aos-delay="100">
               <h3 style="text-transform: uppercase; padding-left: 25px;">  {{$receita3}} <span style="color: rgb(66, 164, 177);"> {{$receita4}} </h3></span> </h3>
@@ -505,7 +505,7 @@
         <div id="carouselExampleIndicators2" class=" carousel slide" data-ride="carousel" style="margin-bottom: 25px; margin-top: 25px;">
 
           <h1 style="margin-bottom: 40px; text-align: center; color: #000000; text-transform: uppercase; ">Feed do <span style="font-weight: bold;">Instagram</span></h1>
-          <div class="elfsight-app-5afc8908-93fd-496d-8d25-e867b8e499f3"></div>    
+          <div class="elfsight-app-5afc8908-93fd-496d-8d25-e867b8e499f3"></div>
 
         </div>
       </div>

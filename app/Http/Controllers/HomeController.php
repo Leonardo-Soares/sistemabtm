@@ -188,7 +188,7 @@ class HomeController extends Controller
         'footer13'=>$footer13
 
         ]);
-        
+
     }
 
     public function topo1(Request $request)
@@ -200,48 +200,61 @@ class HomeController extends Controller
         Confing::atualizar('email',$request->email);
         Confing::atualizar('facebook',$request->facebook);
         Confing::atualizar('boleto',$request->boleto);
-        
+
         return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
     }
 
     public function slide(Request $request)
     {
-        if ($request->hasFile('slide1')) 
+        if ($request->hasFile('slide1'))
         {
             $extension = $request->slide1->extension();
-            $path = $request->slide1->storeAs('public/images', "slide1.$extension");
-            Confing::atualizar('slide1',$path);
+            //$path = $request->slide1->store('public_html/images', "slideteste.$extension");
+            $filename = rand(1000,9999);
+            $imagem = $request->file('slide1');
+            $link = "/imgs/$filename.".$imagem->extension();
+            $extension = $imagem->extension();
+            $salvo = $imagem->move('imgs', $filename.'.'.$extension);
+
+
+            Confing::atualizar('slide1',$link);
         }
 
-        if ($request->hasFile('slide2')) 
+        if ($request->hasFile('slide2'))
         {
-            $extension = $request->slide2->extension();
-            $path = $request->slide2->storeAs('public/images', "slide2.$extension");
-            Confing::atualizar('slide2',$path);
-        }
-        
-        if ($request->hasFile('slide3')) 
-        {
-            $extension = $request->slide3->extension();
-            $path = $request->slide3->storeAs('public/images', "slide3.$extension");
-            Confing::atualizar('slide3',$path);
+            $filename = rand(1000,9999);
+            $imagem = $request->file('slide2');
+            $link = "/imgs/$filename.".$imagem->extension();
+            $extension = $imagem->extension();
+            $salvo = $imagem->move('imgs', $filename.'.'.$extension);
+            Confing::atualizar('slide2',$link);
         }
 
-        if ($request->hasFile('mobileslide1')) 
+        if ($request->hasFile('slide3'))
+        {
+            $filename = rand(1000,9999);
+            $imagem = $request->file('slide3');
+            $link = "/imgs/$filename.".$imagem->extension();
+            $extension = $imagem->extension();
+            $salvo = $imagem->move('imgs', $filename.'.'.$extension);
+            Confing::atualizar('slide3',$link);
+        }
+
+        if ($request->hasFile('mobileslide1'))
         {
             $extension = $request->mobileslide1->extension();
             $path = $request->mobileslide1->storeAs('public/images', "mobileslide1.$extension");
             Confing::atualizar('mobileslide1',$path);
         }
 
-        if ($request->hasFile('mobileslide2')) 
+        if ($request->hasFile('mobileslide2'))
         {
             $extension = $request->mobileslide2->extension();
             $path = $request->mobileslide2->storeAs('public/images', "mobileslide2.$extension");
             Confing::atualizar('mobileslide2',$path);
         }
-        
-        if ($request->hasFile('mobileslide3')) 
+
+        if ($request->hasFile('mobileslide3'))
         {
             $extension = $request->mobileslide3->extension();
             $path = $request->mobileslide3->storeAs('public/images', "mobileslide3.$extension");
@@ -262,12 +275,12 @@ class HomeController extends Controller
         Confing::atualizar('slide3titulo4',$request->slide3titulo4);
 
         return redirect()->back()->with('status', "Conteúdo atualizado com sucesso");
-        
+
     }
 
     public function logo(Request $request)
     {
-        if ($request->hasFile('logo1')) 
+        if ($request->hasFile('logo1'))
         {
             $extension = $request->logo1->extension();
             $path = $request->logo1->storeAs('public/images', "logo1.$extension");
@@ -276,7 +289,7 @@ class HomeController extends Controller
 
         Confing::atualizar('logo2',$request->logo2);
         Confing::atualizar('logo3',$request->logo3);
-        Confing::atualizar('logo4',$request->logo4);    
+        Confing::atualizar('logo4',$request->logo4);
         Confing::atualizar('logo5',$request->logo5);
 
 
@@ -286,21 +299,21 @@ class HomeController extends Controller
 
     public function rodapeslide(Request $request)
     {
-        if ($request->hasFile('rodapeslide1')) 
+        if ($request->hasFile('rodapeslide1'))
         {
             $extension = $request->rodapeslide1->extension();
             $path = $request->rodapeslide1->storeAs('public/images', "rodapeslide1.$extension");
             Confing::atualizar('rodapeslide1',$path);
         }
 
-        if ($request->hasFile('rodapeslide2')) 
+        if ($request->hasFile('rodapeslide2'))
         {
             $extension = $request->rodapeslide2->extension();
             $path = $request->rodapeslide2->storeAs('public/images', "rodapeslide2.$extension");
             Confing::atualizar('rodapeslide2',$path);
         }
 
-        if ($request->hasFile('rodapeslide3')) 
+        if ($request->hasFile('rodapeslide3'))
         {
             $extension = $request->rodapeslide3->extension();
             $path = $request->rodapeslide3->storeAs('public/images', "rodapeslide3.$extension");
@@ -318,7 +331,7 @@ class HomeController extends Controller
 
     public function menu(Request $request)
     {
-        if ($request->hasFile('menu1')) 
+        if ($request->hasFile('menu1'))
         {
             $extension = $request->menu1->extension();
             $path = $request->menu1->storeAs('public/images', "menu1.$extension");
@@ -337,21 +350,21 @@ class HomeController extends Controller
 
     public function associados(Request $request)
     {
-        if ($request->hasFile('associados1')) 
+        if ($request->hasFile('associados1'))
         {
             $extension = $request->associados1->extension();
             $path = $request->associados1->storeAs('public/images', "associados1.$extension");
             Confing::atualizar('associados1',$path);
         }
 
-        if ($request->hasFile('associados2')) 
+        if ($request->hasFile('associados2'))
         {
             $extension = $request->associados2->extension();
             $path = $request->associados2->storeAs('public/images', "associados2.$extension");
             Confing::atualizar('associados2',$path);
         }
 
-        if ($request->hasFile('associados3')) 
+        if ($request->hasFile('associados3'))
         {
             $extension = $request->associados3->extension();
             $path = $request->associados3->storeAs('public/images', "associados3.$extension");
@@ -359,7 +372,7 @@ class HomeController extends Controller
         }
 
 
-        if ($request->hasFile('associados4')) 
+        if ($request->hasFile('associados4'))
         {
             $extension = $request->associados4->extension();
             $path = $request->associados4->storeAs('public/images', "associados4.$extension");
@@ -367,56 +380,56 @@ class HomeController extends Controller
         }
 
 
-        if ($request->hasFile('associados5')) 
+        if ($request->hasFile('associados5'))
         {
             $extension = $request->associados5->extension();
             $path = $request->associados5->storeAs('public/images', "associados5.$extension");
             Confing::atualizar('associados5',$path);
         }
 
-        if ($request->hasFile('associados6')) 
+        if ($request->hasFile('associados6'))
         {
             $extension = $request->associados6->extension();
             $path = $request->associados6->storeAs('public/images', "associados6.$extension");
             Confing::atualizar('associados6',$path);
         }
 
-        if ($request->hasFile('associados7')) 
+        if ($request->hasFile('associados7'))
         {
             $extension = $request->associados7->extension();
             $path = $request->associados7->storeAs('public/images', "associados7.$extension");
             Confing::atualizar('associados7',$path);
         }
 
-        if ($request->hasFile('associados8')) 
+        if ($request->hasFile('associados8'))
         {
             $extension = $request->associados8->extension();
             $path = $request->associados8->storeAs('public/images', "associados8.$extension");
             Confing::atualizar('associados8',$path);
         }
 
-        if ($request->hasFile('associados9')) 
+        if ($request->hasFile('associados9'))
         {
             $extension = $request->associados9->extension();
             $path = $request->associados9->storeAs('public/images', "associados9.$extension");
             Confing::atualizar('associados9',$path);
         }
 
-        if ($request->hasFile('associados10')) 
+        if ($request->hasFile('associados10'))
         {
             $extension = $request->associados10->extension();
             $path = $request->associados10->storeAs('public/images', "associados10.$extension");
             Confing::atualizar('associados10',$path);
         }
 
-        if ($request->hasFile('associados11')) 
+        if ($request->hasFile('associados11'))
         {
             $extension = $request->associados11->extension();
             $path = $request->associados11->storeAs('public/images', "associados11.$extension");
             Confing::atualizar('associados11',$path);
         }
 
-        if ($request->hasFile('associados12')) 
+        if ($request->hasFile('associados12'))
         {
             $extension = $request->associados12->extension();
             $path = $request->associados12->storeAs('public/images', "associados10.$extension");
@@ -434,7 +447,7 @@ class HomeController extends Controller
 
     public function receita(Request $request)
     {
-        Confing::atualizar('receita1',$request->receita1);        
+        Confing::atualizar('receita1',$request->receita1);
         Confing::atualizar('receita2',$request->receita2);
         Confing::atualizar('receita3',$request->receita3);
         Confing::atualizar('receita4',$request->receita4);
@@ -443,7 +456,7 @@ class HomeController extends Controller
         Confing::atualizar('receita7',$request->receita7);
         Confing::atualizar('receita8',$request->receita8);
 
-        if ($request->hasFile('receita9')) 
+        if ($request->hasFile('receita9'))
         {
             $extension = $request->receita9->extension();
             $path = $request->receita9->storeAs('public/images', "receita9.$extension");
@@ -459,7 +472,7 @@ class HomeController extends Controller
 
     public function footer(Request $request)
     {
-        Confing::atualizar('footer1',$request->footer1);        
+        Confing::atualizar('footer1',$request->footer1);
         Confing::atualizar('footer2',$request->footer2);
         Confing::atualizar('footer3',$request->footer3);
         Confing::atualizar('footer4',$request->footer4);
@@ -473,7 +486,7 @@ class HomeController extends Controller
         Confing::atualizar('footer12',$request->footer12);
 
 
-        if ($request->hasFile('footer13')) 
+        if ($request->hasFile('footer13'))
         {
             $extension = $request->footer13->extension();
             $path = $request->footer13->storeAs('public/images', "footer13.$extension");
